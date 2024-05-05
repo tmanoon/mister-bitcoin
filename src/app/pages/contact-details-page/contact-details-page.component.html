@@ -1,4 +1,4 @@
-<section *ngIf="contact" class="contact-details">
+<section *ngIf="contact$ | async as contact" class="contact-details">
     <img [src]="contact.imgUrl" [alt]="contact.name">
     <p>Name: {{contact.name}}</p>
     <p>Phone: {{contact.phone}}</p>

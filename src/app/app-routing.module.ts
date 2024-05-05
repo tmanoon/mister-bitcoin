@@ -16,7 +16,7 @@ const routes: Routes = [
       { path: 'edit/:id', component: ContactEditPageComponent, resolve: { contact: contactResolver } }
     ]
   },
-  { path: 'contact/:id', component: ContactDetailsPageComponent },
+  { path: 'contact/:id', component: ContactDetailsPageComponent, resolve: {contact: contactResolver} },
   { path: '', component: HomePageComponent },
   { path: '**', component: ContactPageComponent }
 ]

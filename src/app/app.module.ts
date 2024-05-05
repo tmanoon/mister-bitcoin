@@ -4,8 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './root-cmp/app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { BitcoinService } from './services/bitcoin.service';
-import { UserService } from './services/user.service';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { ContactListComponent } from './cmps/contact-list/contact-list.component';
 import { ContactDetailsPageComponent } from './pages/contact-details-page/contact-details-page.component';
