@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './root-cmp/app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { bitcoinService } from './services/bitcoin.service';
-import { userService } from './services/user.service';
+import { BitcoinService } from './services/bitcoin.service';
+import { UserService } from './services/user.service';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { ContactListComponent } from './cmps/contact-list/contact-list.component';
 import { ContactDetailsPageComponent } from './pages/contact-details-page/contact-details-page.component';
