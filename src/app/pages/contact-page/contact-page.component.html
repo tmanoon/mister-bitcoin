@@ -1,0 +1,4 @@
+<section class="contact-index">
+    <contact-filter></contact-filter>
+    <contact-list (details)="details.emit($event)" (selectedContactId)="selectedContactId.emit($event)" [contacts]="contacts$ | async"></contact-list>
+</section>

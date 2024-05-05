@@ -1,0 +1,6 @@
+<section *ngIf="contact" class="contact-details">
+    <img [src]="contact.imgUrl" [alt]="contact.name">
+    <p>Name: {{contact.name}}</p>
+    <p>Phone: {{contact.phone}}</p>
+    <p>Email: {{contact.email}}</p>
+</section>

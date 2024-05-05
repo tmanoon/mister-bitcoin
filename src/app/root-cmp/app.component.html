@@ -1,0 +1,7 @@
+<app-header (pageSelected)="onPageSelected($event)"></app-header>
+<main class="main">
+  <home-page *ngIf="selectedPage === 'home'"></home-page>
+  <contact-page (details)="onPageSelected($event)" (selectedContactId)="onSelectedContactId($event)" *ngIf="selectedPage === 'contact'"></contact-page>
+  <contact-details-page [selectedContactId]="selectedContactId" *ngIf="selectedPage === 'contact-details'"></contact-details-page>
+  <statistic-page *ngIf="selectedPage === 'statistic'"></statistic-page>
+</main>
