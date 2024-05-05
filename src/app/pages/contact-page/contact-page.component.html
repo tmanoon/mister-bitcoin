@@ -1,4 +1,6 @@
 <section class="contact-index">
     <contact-filter></contact-filter>
-    <contact-list (details)="details.emit($event)" (selectedContactId)="selectedContactId.emit($event)" [contacts]="contacts$ | async"></contact-list>
+    <contact-list [contacts]="contacts$ | async"></contact-list>
+    <img routerLink="/contact/edit" class="add-contact-btn" src="../../../assets/icons for misterBitcoin/plus.png" alt="add-contact-btn" />
 </section>
+<router-outlet></router-outlet>
