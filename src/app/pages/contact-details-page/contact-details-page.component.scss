@@ -1,0 +1,17 @@
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .btns {
+        display: flex;
+        justify-content: space-between;
+        align-self: stretch;
+
+        img {
+            height: 35px;
+            width: 35px;
+            margin-block: 1em;
+        }
+    }
+    
+}
