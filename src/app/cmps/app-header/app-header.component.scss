@@ -12,6 +12,10 @@
             color: rgb(247, 201, 50);
         }
     }
+    .links {
+        display: flex;
+        gap: 10px;
+    }
     a {
         cursor: pointer;
         font-weight: bold;
