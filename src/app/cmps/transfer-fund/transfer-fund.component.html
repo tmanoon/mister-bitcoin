@@ -1,1 +1,9 @@
-<p>transfer-fund works!</p>
+<section class="transfer-fund" *ngIf="contact">
+    <p>Transfer coins to {{contact.name}}</p>
+    <form [formGroup]="transferForm" (ngSubmit)="onSubmitTransfer()">
+      <label for="amount">Amount</label>
+      <input type="text" id="amount" placeholder="Enter the sun to transfer" formControlName="amount"/>
+      <button>Transfer</button>
+    </form>
+    
+</section>
