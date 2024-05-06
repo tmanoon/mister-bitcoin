@@ -1,0 +1,9 @@
+.moves-list {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        text-align: center;
+        margin-block-end: 1em;
+    }
+}

@@ -1,0 +1,11 @@
+.move-preview {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-block-end: 1em;
+
+    p span {
+        font-family: cereal-med;
+    }
+}

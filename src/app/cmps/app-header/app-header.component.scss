@@ -4,20 +4,20 @@
     background-color: #ececec;
     align-items: center;
     padding-block: 1em;
+    padding-inline: 5vw;
     .logo {
         color: #222;
+        cursor: pointer;
         & span {
             color: rgb(247, 201, 50);
         }
     }
-
     a {
         cursor: pointer;
         font-weight: bold;
         transition: transform 0.8s;
         text-decoration: none;
         color: #222;
-
         &:hover {
             text-decoration: underline;
         }
