@@ -1,9 +1,9 @@
-:host {
+.home-page {
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
-
+    margin-block-start: 150px;
     img {
         width: 20px;
         height: 20px;

@@ -1,9 +1,12 @@
-
-<h3>Hello, {{user.name}}</h3>
-<p>
-<img src="../../../assets/icons for misterBitcoin/coins.png" alt="coins">
-Coins: {{user.coins}}</p>
-<p>
-    <img src="../../../assets/icons for misterBitcoin/bitcoin.png" alt="bitcoin" />
-{{rate}} </p>
-<button (click)="onLogout()">Logout</button>
+<section class="home-page">
+    <h1>Hello, {{user.name}}</h1>
+    <p>
+        <img src="../../../assets/icons for misterBitcoin/coins.png" alt="coins">
+        Coins: {{user.coins}}
+    </p>
+    <p>
+        <img src="../../../assets/icons for misterBitcoin/bitcoin.png" alt="bitcoin" />
+        {{rate}}
+    </p>
+    <button (click)="onLogout()">Logout</button>
+</section>
