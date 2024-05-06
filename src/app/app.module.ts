@@ -18,6 +18,7 @@ import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { TransferFundComponent } from './cmps/transfer-fund/transfer-fund.component';
 import { MovesListComponent } from './cmps/moves-list/moves-list.component';
 import { MovesPreviewComponent } from './cmps/moves-preview/moves-preview.component';
+import { DayGreetingPipe } from './pipes/day-greeting.pipe';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { MovesPreviewComponent } from './cmps/moves-preview/moves-preview.compon
     SignupPageComponent,
     TransferFundComponent,
     MovesListComponent,
-    MovesPreviewComponent
+    MovesPreviewComponent,
+    DayGreetingPipe
   ],
   imports: [
     BrowserModule,
