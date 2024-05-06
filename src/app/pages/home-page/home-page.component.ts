@@ -14,6 +14,7 @@ export class HomePageComponent implements OnInit {
   user!: User
   rate!: string
   router = inject(Router)
+  date: Date = new Date()
 
   private bitcoinService = inject(BitcoinService)
   private userService = inject(UserService)
@@ -24,7 +25,7 @@ export class HomePageComponent implements OnInit {
       (rate:string) => { this.rate = rate },
       (error) => { console.log(error) }
     )
-    console.log(this.user)
+
   }
 
   onLogout() {
