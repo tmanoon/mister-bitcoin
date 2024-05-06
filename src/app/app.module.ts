@@ -12,7 +12,7 @@ import { ContactPreviewComponent } from './cmps/contact-preview/contact-preview.
 import { ChartComponent } from './cmps/chart/chart.component';
 import { ContactFilterComponent } from './cmps/contact-filter/contact-filter.component';
 import { AppHeaderComponent } from './cmps/app-header/app-header.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactEditPageComponent } from './pages/contact-edit-page/contact-edit-page.component';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 
@@ -35,7 +35,8 @@ import { SignupPageComponent } from './pages/signup-page/signup-page.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
   ],
