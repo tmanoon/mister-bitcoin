@@ -1,5 +1,5 @@
-<li *ngIf="move">
-    <p>At: {{move.at | date: 'M/d/yy, h:mm:ss a'}}</p>
-    <p>Amount: {{move.amount}} coins</p>
+<li *ngIf="move" class="move-preview">
+    <p><span>At:</span> {{move.at | date: 'M/d/yy, h:mm:ss a'}}</p>
+    <p><span>Amount:</span> {{move.amount}} coins</p>
 </li>
 
