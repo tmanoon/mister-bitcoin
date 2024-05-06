@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
-import { User } from '../models/user.model'
+import { Move, User } from '../models/user.model'
+import { Contact } from '../models/contact.model';
 import { BehaviorSubject } from 'rxjs';
+import { ContactService } from './contact.service';
 
+const ENTITIY = 'user'
 @Injectable({
   providedIn: 'root'
 })
@@ -21,6 +24,20 @@ export class UserService {
       moves: []
     }
   }
+
+  public signup(name: string) {
+    localStorage.setItem(ENTITIY, name)
+  }
+
+  public addMoves(contact: Contact, amount: string) : Move {
+    return {
+      toId: contact._id,
+      to: contact.name,
+      at: Date.now(),
+      amount: +amount
+    }
+  }
+  
 }
 
 function getRandomIntInclusive(min: number, max: number): number {
