@@ -1,3 +1,7 @@
 <section class="moves-list">
-    
+    <h2>Your moves</h2>
+    <ul>
+        <moves-preview *ngFor="let move of moves" [move]="move"></moves-preview>
+    </ul>
 </section>
+

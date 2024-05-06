@@ -16,8 +16,9 @@ export class MovesListComponent implements OnInit {
   user = this.userService.getUser()
   moves: Move[] | null = null
 
-ngOnInit(): void {
-  
-}
+  ngOnInit(): void {
+    this.moves = this.user.moves.filter(move => move.toId === this.contact._id)
+    console.log(this.moves)
+  }
 
 }
