@@ -12,7 +12,6 @@ export class ContactDetailsPageComponent {
   //switch to props when header work and from here i can pass contactid
   private route = inject(ActivatedRoute)
   private router = inject(Router)
-  contactId: string | null = null
   contact$: Observable<Contact> = this.route.data.pipe(
     map(data => {
       const contact: Contact = data['contact']
@@ -24,7 +23,6 @@ export class ContactDetailsPageComponent {
 
     onBack() {
       this.router.navigateByUrl('/contact')
-      // this.router.navigate(['/pet'], {queryParams: {name:'baba', age:123}})
   }
 
 }
