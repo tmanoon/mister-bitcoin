@@ -4,7 +4,7 @@ import { Contact } from '../models/contact.model';
 import { BehaviorSubject } from 'rxjs';
 import { ContactService } from './contact.service';
 
-const ENTITIY = 'user'
+const ENTITY = 'user'
 @Injectable({
   providedIn: 'root'
 })
@@ -18,11 +18,8 @@ export class UserService {
   constructor() { }
 
   public getUser(): User {
-    return {
-      name: "Ochoa Hyde",
-      coins: 100,
-      moves: []
-    }
+    const user = JSON.parse(localStorage.getItem(ENTITY) || 'null')
+    return user
   }
 
   public signup(name: Partial<User>) {
@@ -31,7 +28,11 @@ export class UserService {
       coins: 100,
       moves: []
     }
-    localStorage.setItem(ENTITIY, JSON.stringify(userToSave))
+    localStorage.setItem(ENTITY, JSON.stringify(userToSave))
+  }
+  
+  logout() {
+    localStorage.clear()
   }
 
   public addMoves(contact: Contact, amount: string): Move {
