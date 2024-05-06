@@ -25,11 +25,16 @@ export class UserService {
     }
   }
 
-  public signup(name: string) {
-    localStorage.setItem(ENTITIY, name)
+  public signup(name: Partial<User>) {
+    const userToSave = {
+      name,
+      coins: 100,
+      moves: []
+    }
+    localStorage.setItem(ENTITIY, JSON.stringify(userToSave))
   }
 
-  public addMoves(contact: Contact, amount: string) : Move {
+  public addMoves(contact: Contact, amount: string): Move {
     return {
       toId: contact._id,
       to: contact.name,
@@ -37,7 +42,7 @@ export class UserService {
       amount: +amount
     }
   }
-  
+
 }
 
 function getRandomIntInclusive(min: number, max: number): number {
