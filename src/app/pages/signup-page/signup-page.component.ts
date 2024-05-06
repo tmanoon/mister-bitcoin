@@ -1,22 +1,30 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { UserService } from '../../services/user.service';
+import { notEnglishLetters } from '../../validators/user.validator';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'signup-page',
   templateUrl: './signup-page.component.html',
   styleUrl: './signup-page.component.scss'
 })
+
 export class SignupPageComponent {
   private fb = inject(FormBuilder)
   userForm!: FormGroup
+  router = inject(Router)
 
-  userService = unject(UserService)
+  userService = inject(UserService)
+
   constructor() {
       this.userForm = this.fb.group({
-          name: ['', [Validators.required, notEnglishLetters], [nameTaken]],
-          age: ['', [Validators.required]],
-          birthDate: [this._formatTime(Date.now()), [Validators.required]],
+          name: ['', [notEnglishLetters]]
       })
+  }
+
+  onSaveUser() {
+    this.userService.signup(this.userForm.value)
+    this.router.navigateByUrl('/home')
   }
 }
