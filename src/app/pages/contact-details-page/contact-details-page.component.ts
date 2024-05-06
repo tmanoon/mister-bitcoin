@@ -1,8 +1,8 @@
 import { Component, Input, OnInit, inject } from '@angular/core';
 import { Contact } from '../../models/contact.model';
 import { Observable, catchError, map } from 'rxjs';
-import { ContactService } from '../../services/contact.service';
 import { ActivatedRoute, Router } from '@angular/router';
+
 @Component({
   selector: 'contact-details-page',
   templateUrl: './contact-details-page.component.html',
@@ -12,6 +12,7 @@ export class ContactDetailsPageComponent {
   //switch to props when header work and from here i can pass contactid
   private route = inject(ActivatedRoute)
   private router = inject(Router)
+
   contact$: Observable<Contact> = this.route.data.pipe(
     map(data => {
       const contact: Contact = data['contact']
