@@ -1,0 +1,16 @@
+.transfer-fund {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+&>*{
+    margin-block: .3em;
+}
+    form {
+        display: flex;
+        gap: 1em;
+        align-items: center;
+        label {
+            font-family: cereal-med, Tahoma;
+        }
+    }
+}
