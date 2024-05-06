@@ -7,6 +7,7 @@ import { contactResolver } from './resolvers/contact.resolver';
 import { ContactDetailsPageComponent } from './pages/contact-details-page/contact-details-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
+import { authGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -19,7 +20,11 @@ const routes: Routes = [
   },
   { path: 'contact/:id', component: ContactDetailsPageComponent, resolve: { contact: contactResolver } },
   { path: 'signup', component: SignupPageComponent },
-  { path: '', component: HomePageComponent },
+  {
+    path: '',
+    component: HomePageComponent,
+    canActivate: [authGuard]
+  },
   { path: '**', component: ContactPageComponent }
 ]
 
