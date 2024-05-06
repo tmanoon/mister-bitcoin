@@ -15,6 +15,7 @@ import { AppHeaderComponent } from './cmps/app-header/app-header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactEditPageComponent } from './pages/contact-edit-page/contact-edit-page.component';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
+import { TransferFundComponent } from './cmps/transfer-fund/transfer-fund.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SignupPageComponent } from './pages/signup-page/signup-page.component';
     ContactFilterComponent,
     AppHeaderComponent,
     ContactEditPageComponent,
-    SignupPageComponent
+    SignupPageComponent,
+    TransferFundComponent
   ],
   imports: [
     BrowserModule,
