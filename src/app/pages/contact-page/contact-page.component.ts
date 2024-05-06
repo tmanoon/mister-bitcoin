@@ -10,8 +10,6 @@ import { Observable } from 'rxjs';
 })
 export class ContactPageComponent implements OnInit {
   contacts$!: Observable<Contact[]>
-  @Output() details = new EventEmitter<string>()
-  @Output() selectedContactId = new EventEmitter<string>()
 
   private contactService = inject(ContactService)
 
