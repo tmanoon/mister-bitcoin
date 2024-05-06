@@ -2,20 +2,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     .btns {
         display: flex;
         justify-content: space-between;
         align-self: stretch;
 
         img {
-            height: 35px;
-            width: 35px;
+            height: 30px;
+            width: 30px;
             margin-block: 1em;
+            cursor: pointer;
         }
     }
-
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 13px;
+    }
+    .text {
+        margin-block: 1.3em;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
     .user-actions {
         margin-block: 1em;
     }
-    
+
 }

@@ -4,8 +4,37 @@
     src: url('/assets/fa-brands-400.ttf');
 }
 
+@font-face {
+    font-family: cereal;
+    src: url('/assets/fonts/CerealBook.ttf');
+}
+
 * {
-    font-family: Tahoma, Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    font-family: cereal, Tahoma;
+}
+
+.btn {
+    align-self: center;
+    padding: .8em;
+    font-size: .7em;
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #ececec;
+        box-shadow: 0px 15px 20px #dfdfdfc8;
+        transform: translateY(7px);
+    }
+}
+
+input {
+    padding: .3em;
 }
