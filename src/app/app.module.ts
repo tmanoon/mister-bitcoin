@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactEditPageComponent } from './pages/contact-edit-page/contact-edit-page.component';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { TransferFundComponent } from './cmps/transfer-fund/transfer-fund.component';
+import { MovesListComponent } from './cmps/moves-list/moves-list.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { TransferFundComponent } from './cmps/transfer-fund/transfer-fund.compon
     AppHeaderComponent,
     ContactEditPageComponent,
     SignupPageComponent,
-    TransferFundComponent
+    TransferFundComponent,
+    MovesListComponent
   ],
   imports: [
     BrowserModule,
