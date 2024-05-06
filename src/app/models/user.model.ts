@@ -1,7 +1,7 @@
 export interface User {
     name: string,
     coins: number,
-    moves: string[]
+    moves: Move[]
 }
 
 export interface Move {
