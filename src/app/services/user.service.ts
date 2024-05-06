@@ -36,6 +36,10 @@ export class UserService {
   }
 
   public addMoves(contact: Contact, amount: string): Move {
+    const userToUpdate = this.getUser()  
+    userToUpdate.coins -= +amount
+    localStorage.setItem(ENTITY, JSON.stringify(userToUpdate))
+
     return {
       toId: contact._id,
       to: contact.name,
@@ -43,7 +47,6 @@ export class UserService {
       amount: +amount
     }
   }
-
 }
 
 function getRandomIntInclusive(min: number, max: number): number {
